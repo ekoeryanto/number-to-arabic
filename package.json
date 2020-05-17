@@ -1,26 +1,33 @@
 {
-  "name": "number-to-arabic",
-  "version": "1.0.2",
-  "description": "Translates/converts an english number to arabic number",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
+  "name": "numar",
+  "version": "1.0.0",
+  "description": "Convert number to arabic and vice versa.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/essaji/number-to-arabic.git"
+    "url": "git+https://github.com/ekoeryanto/numar.git"
   },
   "keywords": [
-    "Arabic",
-    "number"
+    "arab",
+    "number",
+    "convert"
   ],
-  "author": "Eesa",
+  "author": "Eko Eryanto",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/essaji/number-to-arabic/issues"
+    "url": "https://github.com/ekoeryanto/numar/issues"
   },
-  "homepage": "https://github.com/essaji/number-to-arabic#readme",
+  "homepage": "https://github.com/ekoeryanto/numar#readme",
+  "source": "index.js",
+  "main": "dist/numar.js",
+  "module": "dist/numar.module.js",
+  "unpkg": "dist/numar.umd.js",
+  "scripts": {
+    "test": "jest",
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^26.0.1",
+    "microbundle": "^0.12.0"
   }
 }

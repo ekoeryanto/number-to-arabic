@@ -1,5 +1,11 @@
-const numberMappings = require('./numberMappings')
+const { n2aMap, a2nMap } = require('./numberMappings')
 
-const numberToArabic = digit => digit.toString().split("").map(number => numberMappings[number]).join("")
+function convertFromMap(digit, map) {
+  return digit.toString().split('').map(num => map[num]).join('')
+}
 
-exports.numberToArabic = numberToArabic
+const numberToArabic = (digit) => convertFromMap(digit, n2aMap)
+
+const arabicToNumber = (digit) => convertFromMap(digit, a2nMap)
+
+module.exports = { numberToArabic, arabicToNumber }
